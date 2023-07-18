@@ -30,4 +30,3 @@ def copy_paste(file: str, outfiles: list):
                 progresscount += 128
     stdout.write("\r[" + "#" * int(get_terminal_size().columns - 9) + "] | 100%")
     stdout.flush()
-

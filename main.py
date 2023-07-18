@@ -44,14 +44,14 @@ except Exception as x:
 try:
     copy_lib.copy_paste(file=copyargs[0], outfiles=copyargs[1:])
 except FileNotFoundError as x:
-    print(f"copy: Not able to find source file. \ncopy: Given information: {x}")
+    print(f"\ncopy: Not able to find source file. \ncopy: Given information: {x}")
 except PermissionError as x:
-    print(f"copy: Not enough permissions to read and/or write to/from files. \ncopy: Given information: {x}")
+    print(f"\ncopy: Not enough permissions to read and/or write to/from files. \ncopy: Given information: {x}")
 except UnicodeError as x:
-    print(f"copy: Unicode-related error. \ncopy: Given information: {x}")
+    print(f"\ncopy: Unicode-related error. \ncopy: Given information: {x}")
 except KeyboardInterrupt:
-    print(f"copy: Keyboard Interrupt received.")
+    print(f"\ncopy: Keyboard Interrupt received.")
 except EOFError:
-    print(f"copy: Keyboard Interrupt received.")
+    print(f"\ncopy: Keyboard Interrupt received.")
 except Exception as x:
-    print(f"copy: Unknown exception. \ncopy: Given information: {x}")
+    print(f"\ncopy: Unknown exception. \ncopy: Given information: {x}")
