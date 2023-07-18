@@ -6,7 +6,8 @@ Fancier way to copy things around!
 
 This can copy everything, even binary!
 
-[IMAGE SOON]
+![image](https://github.com/Simoso68/copy/assets/87707341/d94feca5-b2e9-45db-a20f-0618b1f657bf)
+
 
 ## Installing
 
