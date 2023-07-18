@@ -25,7 +25,7 @@ jobs:
         pip install pyinstaller
         pyinstaller --noconfirm --onefile --name copy.exe main.py
         python -c "file=open('dist/copy.exe', 'rb');open('bin/copy.exe', 'wb').write(file.read())"
-        rmdir dist /s /Q
-        rmdir build /s /Q
-        del copy.spec /Q
+        cmd /c "rmdir dist /s /Q"
+        cmd /c "rmdir build /s /Q"
+        cmd /c "del copy.spec /Q"
         
