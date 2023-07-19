@@ -14,7 +14,7 @@ This can copy everything, even binary!
 ### Linux
 
 ```bash
-sudo curl https://github.com/Simoso68/copy/raw/main/bin/copy -o /usr/bin/copy && sudo chmod +x /usr/bin/copy
+sudo curl https://github.com/Simoso68/copy/raw/main/bin/copy -sS -L -o /usr/bin/copy && sudo chmod +x /usr/bin/copy
 ```
 
 ### Windows
