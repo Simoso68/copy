@@ -1,4 +1,4 @@
-from json import loads
+from json import loads, JSONDecodeError
 from platform import system
 from os import getenv
 from sys import exit
@@ -43,6 +43,10 @@ def readfile(path):
         replaceCFG(path)
     except KeyError:
         print(f"copy: configuration file at {path} is invalid, values are missing")
+        exit()
+    except JSONDecodeError:
+        print(f"copy: configuration file at {path} is invalid, unvalid JSON format")
+        exit()
     except Exception as x:
         print(f"copy: unknown exception during configuration replacement creation. \ncopy: Given information: {x}")
         exit()

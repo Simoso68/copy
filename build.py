@@ -10,7 +10,7 @@ def msg():
     while True:
         for m in ["\r[|] Building from source ...", "\r[/] Building from source ...", "\r[-] Building from source ...", "\r[\] Building from source ...", "\r[|] Building from source ...", "\r[/] Building from source ...", "\r[-] Building from source ...", "\r[\] Building from source ..."]:
             if completed:
-                stdout.write("\r[✔] Building process completed!")
+                stdout.write("\r[✔] Building process completed!\n")
                 stdout.flush()
                 exit()
             stdout.write(m)
