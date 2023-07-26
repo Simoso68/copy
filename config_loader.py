@@ -1,6 +1,6 @@
 from json import loads, JSONDecodeError
 from platform import system
-from os import getenv
+from os import getenv, geteuid
 from sys import exit
 
 def replaceCFG(location):
@@ -56,11 +56,10 @@ def parseCFG():
         conffile = "C:/Users/" + getenv("USERNAME") + "/.copy.conf.json"
         return readfile(conffile)
     elif system() == "Linux" or system() == "Darwin":
-        if getenv("USER") == "root":
+        if geteuid() == 0:
             conffile = "/root/.copy.conf.json"
         else:
             conffile = "/home/" + getenv("USER") + "/.copy.conf.json"
-
         return readfile(conffile)
     else:
         print("copy: was not able to detect your operating system, using default config.")
