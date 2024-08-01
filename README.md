@@ -56,11 +56,11 @@ Please keep those strings only one character large, if you don't want, that the 
 ### Backend
 
 Currently, there is only one setting, chars-per-iteration, it means how many chars copy reads before writing them to the output. \
-The default value is 256, but you can increase it to make your program faster, but the progress bar might bug out, when the value is to high or decreasing it, \
-to make the process slower, but the progressbar more accurate. \
+The default value is 256, but you can increase it to make your program faster, but the progress bar might bug out, when the value is too high. \
+Decreasing the value makes the process slower, but the progressbar more accurate. \
 Setting the value to 0 will create the output files, but won't write to them.
 
-### Automatic recreation
+### Automatic file creation
 
 If no config file exists, copy will create one for you and let you know. \
 The config file has the default format, which you can see under the Default Configuration section in this README file.
